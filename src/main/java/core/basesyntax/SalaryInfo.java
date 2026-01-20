@@ -4,12 +4,12 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class SalaryInfo {
-    public String getSalaryInfo(String[] names, String[] data, String dateFrom, String dateTo) {
-        final int dateIdx = 0;
-        final int nameIdx = 1;
-        final int hoursIdx = 2;
-        final int rateIdx = 3;
+    private final int dateIdx = 0;
+    private final int nameIdx = 1;
+    private final int hoursIdx = 2;
+    private final int rateIdx = 3;
 
+    public String getSalaryInfo(String[] names, String[] data, String dateFrom, String dateTo) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
         LocalDate fromDate = LocalDate.parse(dateFrom, formatter);
         LocalDate toDate = LocalDate.parse(dateTo, formatter);
